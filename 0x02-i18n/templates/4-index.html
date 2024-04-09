@@ -1,9 +1,18 @@
+<!-- templates/4-index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ _('home_title') }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localization Example</title>
 </head>
 <body>
-    <h1>{{ _('home_header') }}</h1>
+    {% block content %}
+    {% if locale == 'fr' %}
+    <h1>Niveau 1</h1>
+    {% else %}
+    <h1>Level 1</h1>
+    {% endif %}
+    {% endblock %}
 </body>
 </html>
